@@ -1,0 +1,43 @@
+<ul class="list-unstyled">
+
+	<li ng-repeat="dog in dogListingsCtrl.dogs.dogs" class="thumbnail container-fluid" style="max-width: 400px">
+		<img ng-src="{{dog.img}}" alt="Picture of {{dog.name}}" class="thumbnail" style="max-height: 300px">
+		<p class="lead">{{dog.description}}</p>
+
+		<div ng-controller="TabController as tabCtrl">
+			<ul class="nav nav-tabs nav-justified">
+				<li ng-class="{'active': tabCtrl.getTab(1)}"><a href ng-click="tabCtrl.setTab(1)">Details</a></li>
+				<li ng-class="{'active': tabCtrl.getTab(2)}"><a href ng-click="tabCtrl.setTab(2)">User Reviews</a></li>
+				<li ng-class="{'active': tabCtrl.getTab(3)}"><a href ng-click="tabCtrl.setTab(3)">Add Review</a></li>
+			</ul>
+			
+			<div class="container-fluid" ng-show="tabCtrl.getTab(1)">
+				<ul>
+					<li><strong>Name:</strong> {{dog.name}} </li>
+					<li><strong>Breed:</strong> {{dog.breed}} </li>
+					<li><strong>Owner:</strong> <a href="//twitter.com/{{dog.owner.twitter}}"> {{dog.owner.name}}</a></li>
+					<li><strong>We Rate:</strong> {{dog.weRating}}/10 </li>
+				</ul>
+			</div>
+
+			<div class="container-fluid" ng-show="tabCtrl.getTab(2)">
+				<ul class="list-unstyled">
+					<li ng-repeat="review in dog.userRatings">
+						<blockquote>
+							<p>{{review.comment}} -- <strong>{{review.rating}}/10</strong></p>
+						  	<footer><cite>{{review.email}}</cite></footer>
+						</blockquote>
+					</li>
+				</ul>
+			</div>
+
+			<div class="container-fluid" ng-show="tabCtrl.getTab(3)">
+
+				<review-form></review-form>
+
+			</div>
+		</div>
+
+	</li>
+
+</ul>
