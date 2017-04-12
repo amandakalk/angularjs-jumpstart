@@ -10,6 +10,7 @@
 	<div class="container">
 		<div class="thumbnail container-fluid" ng-controller="DogAppController as dogAppCtrl" style="max-width: 400px">
 
+			<img ng-src="{{dogAppCtrl.dog.img}}" alt="Picture of {{dogAppCtrl.dog.name}}" class="thumbnail" style="max-height: 300px">
 			<p class="lead">{{dogAppCtrl.dog.description}}</p>
 
 		</div>
