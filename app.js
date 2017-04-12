@@ -99,6 +99,10 @@
 
 	app.controller('ReviewFormController', function() {
 		this.review = {};
+
+		this.addReview = function(dog) {
+			dog.userRatings.push(this.review);
+		};
 	});
 
 })();

@@ -44,7 +44,7 @@
 
 					<div class="container-fluid" ng-show="tabCtrl.getTab(3)" ng-controller="ReviewFormController as reviewFormCtrl">
 
-						<form name="dogReviewForm" class="form well">
+						<form name="dogReviewForm" class="form well" ng-submit="reviewFormCtrl.addReview(dog)">
 
 							<div class="form-group">
 								<label for="rating" class="form-label">Rating</label>
