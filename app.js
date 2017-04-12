@@ -84,4 +84,8 @@
 			]
 		};
 	});
+
+	app.controller('TabController', function() {
+		
+	});
 })();

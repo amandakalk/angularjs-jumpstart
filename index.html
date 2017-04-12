@@ -15,7 +15,7 @@
 				<img ng-src="{{dog.img}}" alt="Picture of {{dog.name}}" class="thumbnail" style="max-height: 300px">
 				<p class="lead">{{dog.description}}</p>
 
-				<div ng-init="tab = 1">
+				<div ng-init="tab = 1" ng-controller="TabController as TabCtrl">
 					<ul class="nav nav-tabs nav-justified">
 					  <li ng-class="{'active': tab == 1}"><a href ng-click="tab = 1">Details</a></li>
 					  <li ng-class="{'active': tab == 2}"><a href ng-click="tab = 2">User Reviews</a></li>
