@@ -99,9 +99,11 @@
 
 	app.controller('ReviewFormController', function() {
 		this.review = {};
+		this.isSubmitted = false;
 
 		this.addReview = function(dog) {
 			dog.userRatings.push(this.review);
+			this.isSubmitted = true;
 		};
 	});
 

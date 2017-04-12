@@ -44,7 +44,9 @@
 
 					<div class="container-fluid" ng-show="tabCtrl.getTab(3)" ng-controller="ReviewFormController as reviewFormCtrl">
 
-						<form name="dogReviewForm" class="form well" ng-submit="reviewFormCtrl.addReview(dog)">
+						<p class="alert alert-success" role="alert" ng-show="reviewFormCtrl.isSubmitted">Your comment has been submitted.</p>
+
+						<form name="dogReviewForm" class="form well" ng-submit="reviewFormCtrl.addReview(dog)" ng-hide="reviewFormCtrl.isSubmitted">
 
 							<div class="form-group">
 								<label for="rating" class="form-label">Rating</label>
