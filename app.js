@@ -34,7 +34,7 @@
 		return {
 			restrict: 'E',
 			templateUrl: 'dog-listings.template.html',
-			controller: function() {
+			controller: ['$http', function($http) {
 				this.dogs = {
 					"dogs": [
 						{
@@ -116,7 +116,7 @@
 						}
 					]
 				};
-			},
+			}],
 			controllerAs: 'dogListingsCtrl'
 		};
 	});
