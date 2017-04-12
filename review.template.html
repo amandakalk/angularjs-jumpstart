@@ -1,0 +1,25 @@
+<p class="alert alert-success" role="alert" ng-show="reviewFormCtrl.isSubmitted">Your comment has been submitted.</p>
+
+<p class="alert alert-danger" role="alert" ng-show="dogReviewForm.$submitted && dogReviewForm.$invalid">Please fix the errors before submitting.</p>
+
+<form name="dogReviewForm" class="form well" ng-submit="dogReviewForm.$valid && reviewFormCtrl.addReview(dog)" ng-hide="reviewFormCtrl.isSubmitted">
+
+	<div class="form-group" ng-class="{'has-warning': !dogReviewForm.rating.$valid && dogReviewForm.rating.$dirty}">
+		<label for="rating" class="form-label">Rating <small>Required</small></label>
+		<input ng-model="reviewFormCtrl.review.rating" type="number" ng-min="10" ng-max="20" id="rating" name="rating" class="form-control" required>
+		<p class="help-block">Please rate 10-20.</p>
+	</div>
+
+	<div class="form-group">
+		<label for="review" class="form-label">Comment</label>
+		<textarea ng-model="reviewFormCtrl.review.comment" id="review" name="review" class="form-control"></textarea>
+	</div>
+	
+	<div class="form-group" ng-class="{'has-warning': !dogReviewForm.email.$valid && dogReviewForm.email.$dirty}">
+		<label for="email" class="form-label">Your Email <small>Required</small></label>
+		<input ng-model="reviewFormCtrl.review.email" id="email" type="email" name="email" class="form-control" required>
+	</div>
+
+	<button type="submit" class="btn btn-default">Submit</button>
+
+</form>
