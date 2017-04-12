@@ -15,11 +15,11 @@
 				<img ng-src="{{dog.img}}" alt="Picture of {{dog.name}}" class="thumbnail" style="max-height: 300px">
 				<p class="lead">{{dog.description}}</p>
 
-				<div>
+				<div ng-init="tab = 1">
 					<ul class="nav nav-tabs nav-justified">
-					  <li class="active"><a href>Details</a></li>
-					  <li><a href>User Reviews</a></li>
-					  <li><a href>Add Review</a></li>
+					  <li class="active"><a href ng-click="tab = 1">Details</a></li>
+					  <li><a href ng-click="tab = 2">User Reviews</a></li>
+					  <li><a href ng-click="tab = 3">Add Review</a></li>
 					</ul>
 					
 					<div class="container-fluid">
