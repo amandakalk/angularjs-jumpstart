@@ -17,9 +17,9 @@
 
 				<div ng-init="tab = 1">
 					<ul class="nav nav-tabs nav-justified">
-					  <li class="active"><a href ng-click="tab = 1">Details</a></li>
-					  <li><a href ng-click="tab = 2">User Reviews</a></li>
-					  <li><a href ng-click="tab = 3">Add Review</a></li>
+					  <li ng-class="{'active': tab == 1}"><a href ng-click="tab = 1">Details</a></li>
+					  <li ng-class="{'active': tab == 2}"><a href ng-click="tab = 2">User Reviews</a></li>
+					  <li ng-class="{'active': tab == 3}"><a href ng-click="tab = 3">Add Review</a></li>
 					</ul>
 					
 					<div class="container-fluid" ng-show="tab == 1">
