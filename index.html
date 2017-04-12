@@ -22,15 +22,15 @@
 					  <li><a href ng-click="tab = 3">Add Review</a></li>
 					</ul>
 					
-					<div class="container-fluid">
+					<div class="container-fluid" ng-show="tab == 1">
 						<p>Details</p>
 					</div>
 
-					<div class="container-fluid">
+					<div class="container-fluid" ng-show="tab == 2">
 						<p>User Reviews</p>
 					</div>
 
-					<div class="container-fluid">
+					<div class="container-fluid" ng-show="tab == 3">
 						<p>Add Review</p>
 					</div>
 				</div>
