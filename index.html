@@ -8,8 +8,10 @@
 	<h1>We Rate Dogs!</h1>
 
 	<div class="container">
-		<div ng-controller="DogAppController as dogAppCtrl">
-			
+		<div class="thumbnail container-fluid" ng-controller="DogAppController as dogAppCtrl" style="max-width: 400px">
+
+			<p class="lead">{{dogAppCtrl.dog.description}}</p>
+
 		</div>
 	</div>
 
