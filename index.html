@@ -17,20 +17,20 @@
 
 				<div ng-controller="TabController as tabCtrl">
 					<ul class="nav nav-tabs nav-justified">
-					  <li ng-class="{'active': tab == 1}"><a href ng-click="tabCtrl.setTab(1)">Details</a></li>
-					  <li ng-class="{'active': tab == 2}"><a href ng-click="tabCtrl.setTab(2)">User Reviews</a></li>
-					  <li ng-class="{'active': tab == 3}"><a href ng-click="tabCtrl.setTab(3)">Add Review</a></li>
+					  <li ng-class="{'active': tabCtrl.getTab(1)}"><a href ng-click="tabCtrl.setTab(1)">Details</a></li>
+					  <li ng-class="{'active': tabCtrl.getTab(2)}"><a href ng-click="tabCtrl.setTab(2)">User Reviews</a></li>
+					  <li ng-class="{'active': tabCtrl.getTab(3)}"><a href ng-click="tabCtrl.setTab(3)">Add Review</a></li>
 					</ul>
 					
-					<div class="container-fluid" ng-show="tab == 1">
+					<div class="container-fluid" ng-show="tabCtrl.getTab(1)">
 						<p>Details</p>
 					</div>
 
-					<div class="container-fluid" ng-show="tab == 2">
+					<div class="container-fluid" ng-show="tabCtrl.getTab(2)">
 						<p>User Reviews</p>
 					</div>
 
-					<div class="container-fluid" ng-show="tab == 3">
+					<div class="container-fluid" ng-show="tabCtrl.getTab(3)">
 						<p>Add Review</p>
 					</div>
 				</div>

@@ -91,5 +91,9 @@
 		this.setTab = function(index) {
 			this.tab = index;
 		};
+
+		this.getTab = function(index) {
+			return this.tab === index;
+		};
 	});
 })();
