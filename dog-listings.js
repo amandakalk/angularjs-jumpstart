@@ -28,6 +28,18 @@
 				$http.get('/dogs.json').then(function(response) {
 					dogCtrl.dogs = response.data.dogs;
 				});
+
+				this.getUserRating = function(dog) {
+					var total = 0;
+
+					for (var i = 0; i < dog.userRatings.length; i++) {
+						total += parseInt(dog.userRatings[i].rating);
+					}
+
+					total = total/dog.userRatings.length;
+
+					return total;
+				};
 			}],
 			controllerAs: 'dogListingsCtrl'
 		};

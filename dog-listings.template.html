@@ -17,6 +17,7 @@
 					<li><strong>Breed:</strong> {{dog.breed}} </li>
 					<li><strong>Owner:</strong> <a href="//twitter.com/{{dog.owner.twitter}}"> {{dog.owner.name}}</a></li>
 					<li><strong>We Rate:</strong> {{dog.weRating}}/10 </li>
+					<li><strong>User Rating:</strong> {{dogListingsCtrl.getUserRating(dog) | number: 1}}/10</li>
 				</ul>
 			</div>
 
