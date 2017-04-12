@@ -96,4 +96,9 @@
 			return this.tab === index;
 		};
 	});
+
+	app.controller('ReviewFormController', function() {
+		this.review = {};
+	});
+
 })();

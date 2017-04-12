@@ -42,24 +42,24 @@
 						</ul>
 					</div>
 
-					<div class="container-fluid" ng-show="tabCtrl.getTab(3)">
+					<div class="container-fluid" ng-show="tabCtrl.getTab(3)" ng-controller="ReviewFormController as reviewFormCtrl">
 
 						<form name="dogReviewForm" class="form well">
 
 							<div class="form-group">
 								<label for="rating" class="form-label">Rating</label>
-								<input type="number" id="rating" name="rating" class="form-control">
+								<input ng-model="reviewFormCtrl.review.rating" type="number" id="rating" name="rating" class="form-control">
 								<p class="help-block">Please rate 10-20.</p>
 							</div>
 
 							<div class="form-group">
 								<label for="review" class="form-label">Comment</label>
-								<textarea id="review" name="review" class="form-control"></textarea>
+								<textarea ng-model="reviewFormCtrl.review.comment" id="review" name="review" class="form-control"></textarea>
 							</div>
 							
 							<div class="form-group">
 								<label for="email" class="form-label">Your Email</label>
-								<input id="email" type="email" name="email" class="form-control">
+								<input ng-model="reviewFormCtrl.review.email" id="email" type="email" name="email" class="form-control">
 							</div>
 
 							<button type="submit" class="btn btn-default">Submit</button>
