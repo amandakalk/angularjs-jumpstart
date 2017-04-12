@@ -8,12 +8,16 @@
 	<h1>We Rate Dogs!</h1>
 
 	<div class="container">
-		<div class="thumbnail container-fluid" ng-controller="DogAppController as dogAppCtrl" style="max-width: 400px">
 
-			<img ng-src="{{dogAppCtrl.dog.img}}" alt="Picture of {{dogAppCtrl.dog.name}}" class="thumbnail" style="max-height: 300px">
-			<p class="lead">{{dogAppCtrl.dog.description}}</p>
+		<ul class="list-unstyled" ng-controller="DogAppController as dogAppCtrl">
 
-		</div>
+			<li ng-repeat="dog in dogAppCtrl.dogs.dogs" class="thumbnail container-fluid" style="max-width: 400px">
+				<img ng-src="{{dog.img}}" alt="Picture of {{dog.name}}" class="thumbnail" style="max-height: 300px">
+				<p class="lead">{{dog.description}}</p>
+			</li>
+
+		</ul>
+
 	</div>
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
