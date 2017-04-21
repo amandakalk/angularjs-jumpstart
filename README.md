@@ -37,3 +37,14 @@ Here are some additional features you could add to the application:
 - What would happen if there were no user reviews for a dog? Add an empty state when no reviews have been submitted.
 - Build a form to let people submit their own dogs for review.
 
+## Additional Resources
+There are a lot of resources out there to help you learn more about AngularJS as well as HTML/CSS/JS. Some are free and some are not (and some have free trials!), but I encourage you to work through multiple courses on different sites to see what suits you best when learning to code.
+
+Here are a couple of my favorites:
+  - [Code Academy](https://www.codecademy.com/)
+  - [Code School](https://www.codeschool.com/)
+  - [Code Wars](https://www.codewars.com/)
+  - [Lynda](https://www.lynda.com/)
+  - [Treehouse](https://teamtreehouse.com/)
+  - [Ultimate Angular](https://courses.ultimateangular.com/)
+
